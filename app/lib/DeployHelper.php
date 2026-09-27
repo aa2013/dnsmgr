@@ -3043,6 +3043,48 @@ ctrl+x 保存退出<br/>',
                 ],
             ],
         ],
+        'nzcdn' => [
+            'name' => '哪吒CDN（太虚云）',
+            'class' => 2,
+            'icon' => 'nzcdn.png',
+            'desc' => '支持部署到哪吒CDN（太虚云）',
+            'inputs' => [
+                'username' => [
+                    'name' => '账号',
+                    'type' => 'input',
+                    'placeholder' => '账号',
+                    'required' => true,
+                ],
+                'password' => [
+                    'name' => '密码',
+                    'type' => 'input',
+                    'placeholder' => '密码',
+                    'required' => true,
+                ],
+                'proxy' => [
+                    'name' => '使用代理服务器',
+                    'type' => 'radio',
+                    'options' => [
+                        '0' => '否',
+                        '1' => '是',
+                    ],
+                    'value' => '0'
+                ],
+            ],
+            'taskinputs' => [
+                'domain' => [
+                    'name' => '域名',
+                    'type' => 'input',
+                    'placeholder' => '可留空，多个域名用英文逗号分隔',
+                    'note' => '留空则使用证书订单中的全部域名，只填写存在的域名会跳过未填的域名',
+                ],
+                'delete_old_cert' => [
+                    'name' => '更新成功后删除旧证书',
+                    'type' => 'checkbox',
+                    'value' => true,
+                ],
+            ],
+        ],
     ];
 
     public static $class_config = [
